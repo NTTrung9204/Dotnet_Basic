@@ -12,3 +12,4 @@ C:\Users\Admin\Documents\LapTrinh\DotNet\obj\Debug\net8.0\refint\DotNet.dll
 C:\Users\Admin\Documents\LapTrinh\DotNet\obj\Debug\net8.0\DotNet.pdb
 C:\Users\Admin\Documents\LapTrinh\DotNet\obj\Debug\net8.0\DotNet.genruntimeconfig.cache
 C:\Users\Admin\Documents\LapTrinh\DotNet\obj\Debug\net8.0\ref\DotNet.dll
+C:\Users\Admin\Documents\LapTrinh\DotNet\obj\Debug\net8.0\DotNet.sourcelink.json
