@@ -2,53 +2,39 @@
 {
     class Program
     {
-        static void HV(ref int x, ref int y)
-        {
-            int temp = x;
-            x = y;
-            y = temp;
-        }
+        // public delegate bool compare(object x, object y);
 
-        static void A(out int x)
-        {
-            x = 5;
-        }
+        // public static void Sort(object[] sv, compare cmp){
+        //     for(int i = 0; i < sv.Length - 1; i++){
+        //         for(int j = 0; j < sv.Length - 1; j++){
+        //             if(cmp(sv[j], sv[j+1])){
+        //                 object temp = sv[j];
+        //                 sv[j] = sv[j+1];
+        //                 sv[j+1] = temp;
+        //             }
+        //         }
+        //     }
+        // }
         static void Main(string[] args)
         {
-            // MyClass f1 = new MyClass();
-            // f1.A1(); 
-            // f1.B1();
+            // SV[] sv = new SV[]{
+            //     new SV {MSSV = 1, Name = "NVA", DTB = 3.2} ,
+            //     new SV {MSSV = 3, Name = "NVB", DTB = 3.1} ,
+            //     new SV {MSSV = 2, Name = "NVC", DTB = 3.4} ,
+            // };
 
-            // KClass kc = new KClass();
-            // IFile1 f1 = kc;
-            // IFile2 f2 = kc;
-            // f1.A1(); f1.B1();
-            // f2.A2(); f2.B2();
+            // Sort(sv, SV.CompareName);
 
-            // UClass u = new UClass();
-            // IFile1 f1 = u;
-            // IFile3 f3 = u;
-            // f1.A1(); f3.A1();
+            // foreach(SV i in sv){
+            //     Console.WriteLine(i);
+            // }
 
-            // TClass t = new TClass();
-            // IFile1 f1t = t;
-            // IFile3 f3t = t;
-            // f1t.A1(); f3t.A1();
-
-            // try{
-            //     int a = 5;
-            //     int b = 0;
-            //     Console.WriteLine(a/b);
-            // }
-            // catch(DivideByZeroException e){
-            //     Console.WriteLine("\nDivide by zero " + e.Message);
-            // }
-            // catch(Exception e){
-            //     Console.WriteLine("\nException " + e.Message);
-            // }
-            // finally{
-            //     Console.WriteLine("Finally");
-            // }
+            Clock c = new Clock();
+            AnalogClock ac = new AnalogClock();
+            DigitalClock dc = new DigitalClock();
+            c.OnSecondChange += ac.ShowAC;
+            c.OnSecondChange += dc.ShowDC;
+            c.run();
         }
     }
 }
